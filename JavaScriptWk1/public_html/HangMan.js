@@ -8,14 +8,14 @@
  * The first section within this code is where we have identified our global variables
  * for each variable used within the main code we found it necessary to first call on them as a global entity so that the meaning of each could traverse the different uses throughout. 
  */
-//var secretWord;
-//var encryptWord;
-//var numChar;
-//var NooseKnot;
-//var LoadPictures;
-//imageArray;
-//image;
-//indexImg;
+var secretWord;
+var encryptWord;
+var numChar;
+var NooseKnot;
+LoadPictures;
+imageArray;
+image;
+indexImg;
 
 /*
  * The function onload is used to populate the html with the information needed to begin the game
