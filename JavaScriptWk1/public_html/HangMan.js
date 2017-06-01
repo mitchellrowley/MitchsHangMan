@@ -12,10 +12,17 @@ var secretWord;
 var encryptWord;
 var numChar;
 var NooseKnot;
+<<<<<<< Updated upstream
 LoadPictures;
 imageArray;
 image;
 indexImg;
+=======
+var LoadPictures;
+var imageArray;
+var image;
+var indexImg;
+>>>>>>> Stashed changes
 
 /*
  * The function onload is used to populate the html with the information needed to begin the game
@@ -26,29 +33,29 @@ function onload()
    
    secretWord="magician";
    encryptWord = new Array();
-   imgArray = new Array ();
+   imageArray = new Array ();
    indexImg = 0;
    NooseKnot = 0;
    numChar = secretWord.length; 
    var imageDir = "HangManPNGs/";
    var imageNum = 0;
-   imgArray[imageNum] = new Image(imageDir + "HMstart.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-1.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-2.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-3.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-4.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-5.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-6.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-7.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-8.png");
-   imgArray[imageNum++] = new Image(imageDir + "HM-9.png");
-   imgArray[imageNum++] = new Image(imageDir + "HMfinal.png");
+   imageArray[0] = new Image();imageArray[0].src= imageDir + "HMstart.png";
+   imageArray[1] = new Image();imageArray[1].src=imageDir + "HM-1.png";
+   imageArray[2] = new Image();imageArray[2].src=imageDir + "HM-2.png";
+   imageArray[3] = new Image();imageArray[3].src=imageDir + "HM-3.png";
+   imageArray[4] = new Image();imageArray[4].src=imageDir + "HM-4.png";
+   imageArray[5] = new Image();imageArray[5].src=imageDir + "HM-5.png";
+   imageArray[6] = new Image();imageArray[6].src=imageDir + "HM-6.png";
+   imageArray[7] = new Image();imageArray[7].src=imageDir + "HM-7.png";
+   imageArray[8] = new Image();imageArray[8].src=imageDir + "HM-8.png";
+   imageArray[9] = new Image();imageArray[9].src=imageDir + "HM-9.png";
+   imageArray[10] = new Image();imageArray[10].src=imageDir + "HMfinal.png";
    
    for (var i= 0; i < numChar; i ++)
         {
             encryptWord[i]=" * ";              
         }
-    var totalImgs = imgArray.length;
+    var totalImgs = imageArray.length;
     
 }
 /*
@@ -80,13 +87,12 @@ function showGuess()
     }
         if (counter == 0)
         {
-//            indexImg ++;
-            NooseKnot ++;            
-            //document.getElementById("MitchPic").src=imageArray[indexImg];
-            //window.alert( document.getElementById("MitchPic").src );
-            window.alert( imageArray.length );
-            //window.alert(indexImg);
-            document.HangMan.Noose.value=NooseKnot.toString();
+//        window.alert(1+indexImg+","+NooseKnot +","+ document.getElementById("Gallows").src);
+//        window.alert(2+imageArray[2].src);   
+        indexImg ++;
+        NooseKnot ++;            
+        document.getElementById("Gallows").src = imageArray[indexImg].src;
+        document.HangMan.Noose.value=NooseKnot.toString();
             
         }
         if (NooseKnot >= 10)
